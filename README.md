@@ -1,6 +1,6 @@
 # MorphMaster
 
-This is a sub-branches of Morpheus.
+This is a sub-branches of [Morpheus](https://github.com/webDrag0n/MorpheusFrontend) .
 
 ## How to Run
 
