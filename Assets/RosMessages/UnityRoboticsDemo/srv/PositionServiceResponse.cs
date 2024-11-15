@@ -13,14 +13,14 @@ namespace RosMessageTypes.UnityRoboticsDemo
         public const string k_RosMessageName = "unity_robotics_demo_msgs/PositionService";
         public override string RosMessageName => k_RosMessageName;
 
-        public PosRotMsg output;
+        public CameraMsg output;
 
         public PositionServiceResponse()
         {
-            this.output = new PosRotMsg();
+            this.output = new CameraMsg();
         }
 
-        public PositionServiceResponse(PosRotMsg output)
+        public PositionServiceResponse(CameraMsg output)
         {
             this.output = output;
         }
@@ -29,7 +29,7 @@ namespace RosMessageTypes.UnityRoboticsDemo
 
         private PositionServiceResponse(MessageDeserializer deserializer)
         {
-            this.output = PosRotMsg.Deserialize(deserializer);
+            this.output = CameraMsg.Deserialize(deserializer);
         }
 
         public override void SerializeTo(MessageSerializer serializer)
