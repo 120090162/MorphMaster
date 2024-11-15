@@ -81,7 +81,6 @@ public class MjActuator : MjComponent {
       ForceRange = mjcf.GetVector2Attribute("forcerange", defaultValue: Vector2.zero);
       LengthRange = mjcf.GetVector2Attribute("lengthrange", defaultValue: Vector2.zero);
       Gear = mjcf.GetFloatArrayAttribute("gear", defaultValue: new float[] { 1.0f }).ToList();
-
       CtrlLimited = mjcf.GetLimitedAttribute("ctrllimited",
           rangeDefined: mjcf.HasAttribute("ctrlrange"));
       ForceLimited = mjcf.GetLimitedAttribute("forcelimited",
