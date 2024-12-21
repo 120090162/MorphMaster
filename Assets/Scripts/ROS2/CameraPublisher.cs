@@ -53,9 +53,9 @@ public class CameraPublisher : MonoBehaviour
                 step = (uint)(tmpRT.width * 3),
             };
             ApplyData(ref msg, req.GetData<byte>().ToArray());
-            Debug.Log("Preparing to publish message to topic: " + topicName);
+            //Debug.Log("Preparing to publish message to topic: " + topicName);
             ros.Publish(topicName, msg);
-            Debug.Log("Message published to topic: " + topicName);
+            //Debug.Log("Message published to topic: " + topicName);
 
             // Release the temporary render texture
             RenderTexture.ReleaseTemporary(tmpRT);
