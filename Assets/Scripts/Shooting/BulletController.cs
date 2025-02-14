@@ -14,17 +14,22 @@ public class BulletController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // 鼠标左键发射子弹
         {
-            Debug.Log("000");
             Fire();
-            
         }
     }
 
     void Fire()
     {
 
-        Debug.Log("bulletPrefab, firePoint");
-
+        //Debug.Log("bulletPrefab, firePoint");
+        //if (bulletPrefab != null)
+        //{
+        //    Debug.Log("bulletPrefab missing");
+        //}
+        //if (firePoint != null)
+        //{
+        //    Debug.Log("firePoint missing");
+        //}
         if (bulletPrefab != null && firePoint != null)
         {
             // 创建子弹实例
@@ -32,20 +37,18 @@ public class BulletController : MonoBehaviour
 
             // 获取子弹的刚体组件
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            Debug.Log("111");
             if (rb != null)
             {
                 // 给子弹施加向前的力
                 rb.velocity = bullet.transform.forward * bulletSpeed;
-                Debug.Log("222");
             }
 
             // 设置子弹在10秒后销毁
             Destroy(bullet, bulletLifetime);
         }
-        else
-        {
-            Debug.LogWarning("Bullet Prefab or Fire Point is not assigned!");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("Bullet Prefab or Fire Point is not assigned!");
+        //}
     }
 }
